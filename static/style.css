@@ -1,11 +1,11 @@
 .main {
     display: grid;
-  
+
     /* grid-template-areas:
       "header header header"
       "nav content content"
       "footer footer footer";
-  
+
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: auto 1fr auto; */
     /* grid-gap: 10px; */
@@ -14,11 +14,13 @@
       "header header"
       "nav content"
       "footer footer";
-  
+
     grid-template-columns: 200px 1fr;
     grid-template-rows: auto 1fr;
-  
+
     height: 100vh;
+    /* revise */
+    overflow: hidden;
   }
 
   * {
@@ -34,21 +36,26 @@
     border-bottom: 2px solid;
 
   }
-  
+
   nav {
     grid-area: nav;
     background-color: rgb(40, 34, 44);
   }
-  
+
   main {
     grid-area: content;
     background-color: cadetblue
   }
-  
+
   footer {
     grid-area: footer;
     background-color: rgb(21, 9, 44);
     color: white;
+    /* revise */
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
   }
 
   button {
@@ -83,12 +90,20 @@
 .side-link-container {
   border-bottom: 2px solid;
   color: white;
+  /* Revised */
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .nav-side {
   display: flex;
   flex-direction: column;
-  justify-content: space-around; 
+  /* justify-content: space-around;  */
+  /* Revised */
+  height: 100%;
+  justify-content: space-evenly;
 }
 
 .side-links {
@@ -106,7 +121,7 @@
     cursor: pointer;
     color: white;
     background-color: darkblue;
-    border-radius: 30px 90px 60px; 
+    border-radius: 30px 90px 60px;
     border: 2px solid lime;
     transition: all .4s ease-out;
 }
@@ -126,15 +141,15 @@
 .scroll-slides {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-  
+
     border: 2px solid var(--gs0);
     /* border-radius: 8px; */
     height: 92.85vh;
   }
-  
+
   .scroll-slides div {
     scroll-snap-align: start;
-  
+
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -182,3 +197,14 @@
     height: 100%;
   }
 
+/* revise */
+ul.center-align.side-buts{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-evenly;
+}
+
+nav.valign-wrapper{
+  height: calc(100vh - 6vh - 22px);
+}
