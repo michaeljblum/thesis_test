@@ -34,6 +34,7 @@
     color: white;
     height: 6vh;
     border-bottom: 2px solid;
+    z-index:1;
 
   }
 
@@ -43,7 +44,6 @@
     /* revise */
     position: fixed;
     height: 100vh;
-    z-index: -1;
     width:200px;
   }
 
