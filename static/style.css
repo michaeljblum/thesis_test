@@ -20,7 +20,7 @@
 
     height: 100vh;
     /* revise */
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   * {
@@ -40,6 +40,11 @@
   nav {
     grid-area: nav;
     background-color: rgb(40, 34, 44);
+    /* revise */
+    position: fixed;
+    height: 100vh;
+    z-index: -1;
+    width:200px;
   }
 
   main {
@@ -52,10 +57,10 @@
     background-color: rgb(21, 9, 44);
     color: white;
     /* revise */
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     left:0;
-    right:0;
+    right:0; */
   }
 
   button {
@@ -95,6 +100,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding-top: 12em;
 }
 
 .nav-side {
@@ -144,7 +150,7 @@
 
     border: 2px solid var(--gs0);
     /* border-radius: 8px; */
-    height: 92.85vh;
+    /* height: 92.85vh; */
   }
 
   .scroll-slides div {
@@ -203,8 +209,5 @@ ul.center-align.side-buts{
   flex-direction: column;
   height: 50%;
   justify-content: space-evenly;
-}
-
-nav.valign-wrapper{
-  height: calc(100vh - 6vh - 22px);
+  padding-bottom: 8em;
 }
